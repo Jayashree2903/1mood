@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mood</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        h1{
+            color:#ffffff;
+            background-color:rgb(135, 190, 222);
+            text-align:center;
+            font-size: 60px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        div.button{
+            display: inline-block;
+        }
+        .mood{
+            border-radius:10px;
+            padding: 30px;
+            color:white;
+            background-color: cadetblue;
+            font-size:medium;
+        }
+        .mood:hover{
+            color:rgb(0, 110, 255);
+            background-color: #ffffff;
+        }
+        img#mood{
+          border:none;
+          margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+        <h1> SELECT YOUR MOOD </h1>
+    <center><div class="button">
+        <input class="mood" type="button" onclick="hap()" value="HAPPY">
+    </div>
+    <div class="button">
+        <input class="mood" type="button" onclick="norm()" value="NORMAL">
+    </div>
+    <div class="button">
+    </div>    
+        <input class="mood" type="button" onclick="sad()" value="SAD">
+    </div>
+    <div>
+    <img id="mood" height="20%" width="20%">
+   </div>
+    <script>
+        var images=["happy.jpg","normal.jpg","sad.jpg"];
+        function hap(){
+         document.getElementById("mood").src=images[0];
+        }
+        function norm(){
+            document.getElementById("mood").src=images[1];
+        }
+        function sad(){
+            document.getElementById("mood").src=images[2];
+        }
+    </script>
+    </table>
+</center>
+</body>
+</html>
